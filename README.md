@@ -6,6 +6,7 @@ NotoSansCJK & NotoSerifCJK 2 weight (Regular & Bold) patch for Android devices.
 * NotoSerifCJK 2 (Regular & Bold) weight patch applies to Android P+
 
 Fonts are provided by [Google](https://github.com/googlei18n/noto-cjk).
+
 This module is forked from [simonsmh](https://github.com/simonsmh)'s [magisk-notocjk](https://github.com/Magisk-Modules-Repo/magisk-notocjk).
 
 
