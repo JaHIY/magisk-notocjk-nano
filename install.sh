@@ -145,36 +145,40 @@ on_install() {
         cp -af "$MIRRORPATH/$FILEPATH/$FILE" "$MODPATH/$FILEPATH/$FILE"
         sed -i -e '
             /<family lang="zh-Hans">/,/<\/family>/ {
-            /<family.*>\|<\/family>/!d;
+            /<family.*>/!d;
             /<family.*>/a \
         <font weight="400" style="normal" index="2">NotoSansCJK-Regular.ttc</font>\
         <font weight="400" style="normal" index="2" fallbackFor="serif">NotoSerifCJK-Regular.ttc</font>\
         <font weight="700" style="normal" index="2">NotoSansCJK-Bold.ttc</font>\
         <font weight="700" style="normal" index="2" fallbackFor="serif">NotoSerifCJK-Bold.ttc</font>
+    </family>
             };
             /<family lang="\(zh-Hant\|zh-Bopo\|zh-Hant zh-Bopo\)">/,/<\/family>/ {
-            /<family.*>\|<\/family>/!d;
+            /<family.*>/!d;
             /<family.*>/a \
         <font weight="400" style="normal" index="3">NotoSansCJK-Regular.ttc</font>\
         <font weight="400" style="normal" index="3" fallbackFor="serif">NotoSerifCJK-Regular.ttc</font>\
         <font weight="700" style="normal" index="3">NotoSansCJK-Bold.ttc</font>\
         <font weight="700" style="normal" index="3" fallbackFor="serif">NotoSerifCJK-Bold.ttc</font>
+    </family>
             };
             /<family lang="ja">/,/<\/family>/ {
-            /<family.*>\|<\/family>/!d;
+            /<family.*>/!d;
             /<family.*>/a \
         <font weight="400" style="normal" index="0">NotoSansCJK-Regular.ttc</font>\
         <font weight="400" style="normal" index="0" fallbackFor="serif">NotoSerifCJK-Regular.ttc</font>\
         <font weight="700" style="normal" index="0">NotoSansCJK-Bold.ttc</font>\
         <font weight="700" style="normal" index="0" fallbackFor="serif">NotoSerifCJK-Bold.ttc</font>
+    </family>
             };
             /<family lang="ko">/,/<\/family>/ {
-            /<family.*>\|<\/family>/!d;
+            /<family.*>/!d;
             /<family.*>/a \
         <font weight="400" style="normal" index="1">NotoSansCJK-Regular.ttc</font>\
         <font weight="400" style="normal" index="1" fallbackFor="serif">NotoSerifCJK-Regular.ttc</font>\
         <font weight="700" style="normal" index="1">NotoSansCJK-Bold.ttc</font>\
         <font weight="700" style="normal" index="1" fallbackFor="serif">NotoSerifCJK-Bold.ttc</font>
+    </family>
         };' "$MODPATH/$FILEPATH/$FILE"
 
         if [ ! $(cat "$MODPATH/$FILEPATH/$FILE" | grep 'DroidSansFallback.ttf') ]; then
